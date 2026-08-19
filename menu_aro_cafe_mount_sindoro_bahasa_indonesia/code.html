@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Menu - Aro Cafe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#fbf9f4",
+                      "primary": "#173124",
+                      "surface-container": "#f0eee9",
+                      "primary-fixed": "#ccead6",
+                      "surface-dim": "#dbdad5",
+                      "inverse-on-surface": "#f2f1ec",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#eae8e3",
+                      "secondary": "#675d4d",
+                      "surface-container-low": "#f5f3ee",
+                      "on-background": "#1b1c19",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e4e2dd",
+                      "on-primary-container": "#98b5a3",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb598",
+                      "surface-tint": "#496455",
+                      "secondary-fixed": "#f0e0cc",
+                      "inverse-primary": "#b0cdbb",
+                      "on-tertiary-container": "#e99b7b",
+                      "primary-fixed-dim": "#b0cdbb",
+                      "surface-container-highest": "#e4e2dd",
+                      "secondary-fixed-dim": "#d3c4b1",
+                      "tertiary": "#4d1d06",
+                      "primary-container": "#2d4739",
+                      "on-secondary-fixed": "#221a0e",
+                      "on-surface": "#1b1c19",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#693219",
+                      "on-secondary-fixed-variant": "#4f4537",
+                      "on-error": "#ffffff",
+                      "outline": "#727973",
+                      "secondary-container": "#f0e0cc",
+                      "inverse-surface": "#30312e",
+                      "outline-variant": "#c2c8c2",
+                      "on-surface-variant": "#424844",
+                      "on-primary-fixed-variant": "#324c3e",
+                      "on-tertiary-fixed-variant": "#6f371e",
+                      "on-secondary-container": "#6e6353",
+                      "on-primary-fixed": "#062014",
+                      "tertiary-fixed": "#ffdbce",
+                      "on-tertiary-fixed": "#370e00",
+                      "surface": "#fbf9f4",
+                      "background": "#fbf9f4",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "80px",
+                      "container-max": "1200px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "lg": "40px",
+                      "md": "24px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Noto Serif", "serif"
+                      ],
+                      "body-lg": [
+                              "Inter", "sans-serif"
+                      ],
+                      "display-lg": [
+                              "Noto Serif", "serif"
+                      ],
+                      "headline-sm": [
+                              "Noto Serif", "serif"
+                      ],
+                      "headline-lg": [
+                              "Noto Serif", "serif"
+                      ],
+                      "body-md": [
+                              "Inter", "sans-serif"
+                      ],
+                      "headline-lg-mobile": [
+                              "Noto Serif", "serif"
+                      ],
+                      "label-lg": [
+                              "Inter", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.secondary-fixed'); /* Warm Sand background requested */
+            color: theme('colors.on-surface');
+        }
+        .dotted-leader {
+            border-bottom: 1px dotted theme('colors.outline-variant');
+            flex-grow: 1;
+            margin: 0 theme('spacing.base');
+            position: relative;
+            top: -6px;
+        }
+        /* Custom scrollbar for horizontal lists */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-sm max-w-container-max mx-auto bg-surface/80 backdrop-blur-md dark:bg-inverse-surface/80 shadow-[0_10px_30px_-5px_rgba(45,71,57,0.08)]">
+<div class="font-headline-lg text-headline-lg text-primary dark:text-inverse-primary tracking-tight">
+            Aro Cafe
+        </div>
+<nav class="hidden md:flex items-center gap-md font-label-lg text-label-lg">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container/20 transition-all rounded px-3 py-2" href="#">Cerita Kami</a>
+<a class="text-primary dark:text-inverse-primary border-b-2 border-primary font-bold pb-1 hover:bg-surface-container-low dark:hover:bg-primary-container/20 transition-all rounded px-3 py-2" href="#">Menu</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container/20 transition-all rounded px-3 py-2" href="#">Lokasi</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container/20 transition-all rounded px-3 py-2" href="#">Reservasi</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-4 py-2 rounded-lg hover:opacity-90 scale-95 active:scale-100 transition-transform duration-200">
+            Pesan Meja
+        </button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-xl px-gutter max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<section class="mb-xl text-center max-w-2xl mx-auto">
+<h1 class="font-display-lg text-display-lg text-primary mb-sm md:font-display-lg font-headline-lg-mobile text-headline-lg-mobile">Menu Kami</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Minuman dan hidangan yang dibuat dengan teliti, terinspirasi oleh pemandangan tenang Gunung Sindoro.</p>
+</section>
+<!-- Filters & Categories Sticky Bar -->
+<div class="sticky top-20 z-40 bg-secondary-fixed/90 backdrop-blur-sm py-4 mb-lg -mx-gutter px-gutter shadow-[0_10px_30px_-5px_rgba(45,71,57,0.05)]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 max-w-container-max mx-auto">
+<!-- Categories -->
+<div class="flex overflow-x-auto hide-scrollbar w-full md:w-auto gap-2 pb-2 md:pb-0">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary text-on-primary font-label-lg text-label-lg">Kopi</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface text-primary border border-primary/20 hover:bg-primary-fixed/50 font-label-lg text-label-lg transition-colors">Non-Kopi</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface text-primary border border-primary/20 hover:bg-primary-fixed/50 font-label-lg text-label-lg transition-colors">Makanan Utama</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-surface text-primary border border-primary/20 hover:bg-primary-fixed/50 font-label-lg text-label-lg transition-colors">Pastri/Camilan</button>
+</div>
+<!-- Diet Filters -->
+<div class="flex gap-2 w-full md:w-auto justify-start md:justify-end border-t md:border-t-0 border-outline-variant pt-2 md:pt-0">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors font-label-lg text-[12px]">
+<span class="material-symbols-outlined text-[16px]">eco</span> Vegan
+                    </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors font-label-lg text-[12px]">
+<span class="material-symbols-outlined text-[16px]">no_meals</span> Bebas Gluten
+                    </button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors font-label-lg text-[12px]">
+<span class="material-symbols-outlined text-[16px]">verified</span> Halal
+                    </button>
+</div>
+</div>
+</div>
+<!-- Menu Section: Kopi (Coffee) -->
+<section class="mb-xl" id="kopi">
+<div class="flex items-center gap-4 mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary md:font-headline-lg font-headline-md text-headline-md">Kopi</h2>
+<div class="h-px bg-outline-variant flex-grow"></div>
+</div>
+<!-- Bento Grid Layout for Featured Items -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-lg">
+<!-- Featured Card 1 -->
+<article class="col-span-1 md:col-span-2 bg-surface rounded-lg overflow-hidden shadow-[0_10px_30px_-5px_rgba(45,71,57,0.08)] relative group">
+<div class="h-64 bg-cover bg-center w-full transition-transform duration-700 group-hover:scale-105" data-alt="A beautifully crafted latte art in a ceramic mug, sitting on a rustic wooden table by a window with natural morning sunlight illuminating the rising steam. The aesthetic is serene, warm, and inviting, reflecting a slow-living coffee culture. Soft focus background with subtle green plant leaves." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlTirWRiYGO4RNaVJVjArYLV-iCNkpxCWVr8B-rOgk8PMB8ZHC1HDYdxIwmlOy0-mfQMiva6-VHnOlHWo2sFQIdppgGdbxxdrUBt6woi1HOnyblM-wPcMjnnNGIqwc6G81t31qz5D5quQlJZdRWYHpBy4o6Fo9x0pWIWR80HyZjN1TIgDQKlqYKGDxmxezR9-pQqv6RGsDrjobr7q01Cx2hm03bTEY04-NGxB_jTYaWYwfTaQCNUPI')"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary-container text-on-primary-container px-2 py-1 rounded text-[12px] font-label-lg uppercase tracking-wider">Paling Laris</span>
+</div>
+<div class="p-6 bg-surface relative z-10">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-primary">Latte Khas Sindoro</h3>
+<span class="font-body-lg text-body-lg text-secondary font-semibold">Rp 45.000</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Espresso racikan kami dengan susu kukus yang lembut, dipadukan dengan sedikit gula aren lokal dan sentuhan garam laut.</p>
+<div class="flex gap-2">
+<span class="text-xs border border-outline-variant rounded px-2 py-1 text-on-surface-variant">Halal</span>
+</div>
+</div>
+</article>
+<!-- Featured Card 2 -->
+<article class="col-span-1 bg-surface rounded-lg overflow-hidden shadow-[0_10px_30px_-5px_rgba(45,71,57,0.08)] relative group flex flex-col">
+<div class="h-48 bg-cover bg-center w-full transition-transform duration-700 group-hover:scale-105" data-alt="A cold brew coffee served in a tall glass filled with large ice cubes, condensation forming on the outside. Placed on a minimalist stone coaster against a light warm sand-colored background. Crisp, refreshing lighting with deep amber tones in the coffee." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNKS2BxNXyefWdzMkEYvPoL8k5c1N8NlMAedbtnLCjZh-XCBQC1fO2ObhTWbZ5Q76wOWEFw-Gjs6c9--B_RYshx1tSbOqnHkE5cZIrNpA7c4GiPPYo8KXNbtUBDvEyDh0uGIYVfX0_fDxHa7xooafSrveZnGDBAGvkOnRMJG-CNL1EVKTK595ojxTMRxySVGB8Le0C-hXBpVyy3m-1FyYLePkDrKW6DKvY0Q8MfObw_SCmHiHv9Awe')"></div>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded text-[12px] font-label-lg uppercase tracking-wider">Baru</span>
+</div>
+<div class="p-6 bg-surface flex-grow flex flex-col justify-between relative z-10">
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Cold Brew Arabika</h3>
+<span class="font-body-md text-body-md text-secondary font-semibold">Rp 40.000</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 text-sm">Diseduh perlahan selama 18 jam menghasilkan profil yang lembut, keasaman rendah dengan sentuhan cokelat hitam dan buah beri.</p>
+</div>
+<div class="flex gap-2 mt-auto">
+<span class="text-xs border border-outline-variant rounded px-2 py-1 text-on-surface-variant">Vegan</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Classic Menu List Layout -->
+<div class="bg-surface rounded-lg p-6 shadow-[0_10px_30px_-5px_rgba(45,71,57,0.08)]">
+<ul class="space-y-6">
+<li class="flex flex-col md:flex-row justify-between items-baseline group cursor-pointer hover:bg-surface-container-low p-2 -mx-2 rounded transition-colors">
+<div class="flex-grow flex items-baseline w-full">
+<h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-tertiary transition-colors">Espresso</h4>
+<div class="dotted-leader"></div>
+<span class="font-body-lg text-body-lg text-secondary font-medium whitespace-nowrap ml-2">Rp 25.000</span>
+</div>
+<div class="w-full md:w-auto mt-1 md:mt-0 md:ml-4 text-on-surface-variant font-body-md text-sm md:text-right max-w-xs">Biji kopi lokal single origin. Sentuhan karamel dan jeruk.</div>
+</li>
+<li class="flex flex-col md:flex-row justify-between items-baseline group cursor-pointer hover:bg-surface-container-low p-2 -mx-2 rounded transition-colors">
+<div class="flex-grow flex items-baseline w-full">
+<h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-tertiary transition-colors">Americano</h4>
+<div class="dotted-leader"></div>
+<span class="font-body-lg text-body-lg text-secondary font-medium whitespace-nowrap ml-2">Rp 30.000</span>
+</div>
+<div class="w-full md:w-auto mt-1 md:mt-0 md:ml-4 text-on-surface-variant font-body-md text-sm md:text-right max-w-xs">Panas atau es. Bersih dan seimbang.</div>
+</li>
+<li class="flex flex-col md:flex-row justify-between items-baseline group cursor-pointer hover:bg-surface-container-low p-2 -mx-2 rounded transition-colors">
+<div class="flex-grow flex items-baseline w-full">
+<h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-tertiary transition-colors">Cappuccino</h4>
+<div class="dotted-leader"></div>
+<span class="font-body-lg text-body-lg text-secondary font-medium whitespace-nowrap ml-2">Rp 40.000</span>
+</div>
+<div class="w-full md:w-auto mt-1 md:mt-0 md:ml-4 text-on-surface-variant font-body-md text-sm md:text-right max-w-xs">Espresso pekat dengan lapisan busa susu tebal.</div>
+</li>
+</ul>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-gutter flex flex-col md:flex-row justify-between items-start gap-md max-w-container-max mx-auto bg-surface-container-high dark:bg-inverse-surface mt-auto">
+<div class="font-headline-md text-headline-md text-primary dark:text-inverse-primary mb-4 md:mb-0">
+            Aro Cafe
+        </div>
+<div class="flex flex-col md:flex-row gap-6 md:gap-lg font-label-lg text-label-lg">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Hubungi kami melalui WhatsApp</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Ikuti di Instagram</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Tonton di TikTok</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Kebijakan Privasi</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant mt-6 md:mt-0">
+            © 2024 Aro Cafe Mount Sindoro. Hak cipta dilindungi undang-undang.
+        </div>
+</footer>
+</body></html>

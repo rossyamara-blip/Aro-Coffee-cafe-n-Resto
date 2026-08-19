@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  body {
+    background-color: theme('colors.secondary-fixed');
+    color: theme('colors.on-surface');
+  }
+  .dotted-leader {
+    border-bottom: 1px dotted theme('colors.outline-variant');
+    flex-grow: 1;
+    margin: 0 theme('spacing.base');
+    position: relative;
+    top: -6px;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

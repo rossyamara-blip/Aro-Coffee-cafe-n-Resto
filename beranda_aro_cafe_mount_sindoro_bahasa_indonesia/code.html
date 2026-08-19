@@ -1,0 +1,243 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Aro Cafe | Mount Sindoro's Hidden Gem</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fbf9f4",
+                        "primary": "#173124",
+                        "surface-container": "#f0eee9",
+                        "primary-fixed": "#ccead6",
+                        "surface-dim": "#dbdad5",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#eae8e3",
+                        "secondary": "#675d4d",
+                        "surface-container-low": "#f5f3ee",
+                        "on-background": "#1b1c19",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e4e2dd",
+                        "on-primary-container": "#98b5a3",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb598",
+                        "surface-tint": "#496455",
+                        "secondary-fixed": "#f0e0cc",
+                        "inverse-primary": "#b0cdbb",
+                        "on-tertiary-container": "#e99b7b",
+                        "primary-fixed-dim": "#b0cdbb",
+                        "surface-container-highest": "#e4e2dd",
+                        "secondary-fixed-dim": "#d3c4b1",
+                        "tertiary": "#4d1d06",
+                        "primary-container": "#2d4739",
+                        "on-secondary-fixed": "#221a0e",
+                        "on-surface": "#1b1c19",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#693219",
+                        "on-secondary-fixed-variant": "#4f4537",
+                        "on-error": "#ffffff",
+                        "outline": "#727973",
+                        "secondary-container": "#f0e0cc",
+                        "inverse-surface": "#30312e",
+                        "outline-variant": "#c2c8c2",
+                        "on-surface-variant": "#424844",
+                        "on-primary-fixed-variant": "#324c3e",
+                        "on-tertiary-fixed-variant": "#6f371e",
+                        "on-secondary-container": "#6e6353",
+                        "on-primary-fixed": "#062014",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-tertiary-fixed": "#370e00",
+                        "surface": "#fbf9f4",
+                        "background": "#fbf9f4",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "container-max": "1200px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "lg": "40px",
+                        "md": "24px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif", "serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "display-lg": ["Noto Serif", "serif"],
+                        "headline-sm": ["Noto Serif", "serif"],
+                        "headline-lg": ["Noto Serif", "serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Noto Serif", "serif"],
+                        "label-lg": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .font-headline-md { font-family: theme('fontFamily.headline-md'); font-size: 24px; line-height: 1.3; font-weight: 600; }
+            .text-headline-md { font-size: 24px; line-height: 1.3; font-weight: 600; }
+            .font-body-lg { font-family: theme('fontFamily.body-lg'); font-size: 18px; line-height: 1.6; font-weight: 400; }
+            .text-body-lg { font-size: 18px; line-height: 1.6; font-weight: 400; }
+            .font-display-lg { font-family: theme('fontFamily.display-lg'); font-size: 48px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; }
+            .text-display-lg { font-size: 48px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; }
+            .font-headline-sm { font-family: theme('fontFamily.headline-sm'); font-size: 20px; line-height: 1.4; font-weight: 500; }
+            .text-headline-sm { font-size: 20px; line-height: 1.4; font-weight: 500; }
+            .font-headline-lg { font-family: theme('fontFamily.headline-lg'); font-size: 32px; line-height: 1.2; font-weight: 600; }
+            .text-headline-lg { font-size: 32px; line-height: 1.2; font-weight: 600; }
+            .font-body-md { font-family: theme('fontFamily.body-md'); font-size: 16px; line-height: 1.5; font-weight: 400; }
+            .text-body-md { font-size: 16px; line-height: 1.5; font-weight: 400; }
+            .font-headline-lg-mobile { font-family: theme('fontFamily.headline-lg-mobile'); font-size: 28px; line-height: 1.2; font-weight: 600; }
+            .text-headline-lg-mobile { font-size: 28px; line-height: 1.2; font-weight: 600; }
+            .font-label-lg { font-family: theme('fontFamily.label-lg'); font-size: 14px; line-height: 1.2; letter-spacing: 0.05em; font-weight: 600; }
+            .text-label-lg { font-size: 14px; line-height: 1.2; letter-spacing: 0.05em; font-weight: 600; }
+        }
+    </style>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-sm max-w-container-max mx-auto left-0 right-0 bg-surface/80 backdrop-blur-md shadow-[0_10px_30px_-5px_rgba(45,71,57,0.08)]">
+<div class="flex items-center gap-md">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">Aro Cafe</span>
+</div>
+<nav class="hidden md:flex gap-md items-center">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all px-4 py-2 rounded-lg" href="#">Menu</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all px-4 py-2 rounded-lg" href="#">Reservasi</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all px-4 py-2 rounded-lg" href="#">Cerita Kami</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-all px-4 py-2 rounded-lg" href="#">Lokasi</a>
+</nav>
+<button class="hidden md:flex items-center gap-2 bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm scale-95 active:scale-100 transition-transform duration-200">
+            Pesan Meja
+        </button>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center pt-24 pb-16 px-gutter">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, wide-angle shot of a beautiful modern cafe nestled on the lush, misty slopes of a majestic mountain. The morning fog rolls gently over the forested hills, softly illuminated by warm, golden sunlight breaking through the clouds. The cafe features elegant glass walls and warm wood accents, blending harmoniously with the serene natural environment. The atmosphere is calm, sophisticated, and deeply restorative, characterized by a refined Modern-Organic aesthetic with rich forest greens and warm sand tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwUu2dzrukRtKG53AsZT_NkyNXJy2gEdfguVkfIK_VbP1aXcl_g-RZa2C18y7xNrKtcaXzHQ_mdrpTCyOmTITuwp1QzHrvsS_uOXTnhLpXw9dgwk6lYWVPXeLOfbzNhswvD55ovegi6150ZLm4H--mBO9vZ3ZJDsmLK1CC5j5fukkrG3K1XqGT88SALwbXIBUOsMhsZlDXBlM_XPzEvLRAwsRlmHh5VPASXZMQ1C50lJm5MQUCuIG4')"></div>
+
+
+</div>
+<div class="relative z-10 max-w-3xl text-center flex flex-col items-center gap-8">
+<h1 class="font-display-lg text-display-lg text-on-primary md:text-[64px] md:leading-[1.1]">
+                    Tempat Terbaik untuk Ngopi dan Menikmati Alam
+                </h1>
+<p class="font-body-lg text-body-lg text-on-primary max-w-xl mx-auto">
+                    Permata tersembunyi yang terletak di lereng Gunung Sindoro yang tenang. Rasakan perpaduan sempurna antara pemandangan yang memukau, kopi pilihan yang nikmat, dan ruang yang dirancang untuk setiap generasi agar bisa bersantai dan bernapas lega.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto justify-center">
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-8 py-4 rounded-lg hover:bg-primary-container hover:shadow-lg transition-all w-full sm:w-auto">
+                        Lihat Menu
+                    </button>
+<button class="bg-transparent border border-primary text-primary font-label-lg text-label-lg px-8 py-4 rounded-lg hover:bg-surface-container-low transition-all w-full sm:w-auto">
+                        Reservasi Meja
+                    </button>
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="py-xl px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-lg items-center">
+<div class="md:col-span-5 md:col-start-2 flex flex-col gap-6">
+<h2 class="font-headline-lg text-headline-lg text-primary">Tempat Berlindung di Atas Awan</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Aro Cafe lebih dari sekadar kedai kopi; ini adalah permata tersembunyi di mana energi dinamis kaum muda bertemu dengan kenyamanan yang diperlukan bagi para senior kami. Kami percaya pada gaya hidup santai, menawarkan tempat peristirahatan dari hiruk pikuk kota.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Apakah Anda seorang penjelajah yang mencari matahari terbit berkabut yang sempurna untuk Instagram, atau keluarga yang menikmati pertemuan akhir pekan yang tenang, ruang kami yang dirancang dengan cermat memastikan semua orang menemukan sudut sempurna mereka di tengah keindahan alam Sindoro.
+                    </p>
+</div>
+<div class="md:col-span-5 md:col-start-8">
+<div class="relative rounded-xl overflow-hidden shadow-[0_10px_30px_-5px_rgba(45,71,57,0.15)] aspect-[4/5]">
+<img class="w-full h-full object-cover" data-alt="A close-up lifestyle shot of a multi-generational family enjoying coffee at an elegant cafe with a mountain view in the background. A young adult and a senior are smiling and conversing over beautifully crafted latte art in ceramic cups. The setting is bright and airy, with warm wood tables and soft natural light. The aesthetic emphasizes connection, calm, and slow living, utilizing a palette of off-whites, warm sand, and subtle forest green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPGbEtomN-lD2zVfPvgx0crt1e_Icud0_VaVN2Ztrrm-Qq3TqW0xO79qi_SJT17YvGav7nQY75AoQnJ6xftY4JpkhBRDSUXoO_EJbpCq9MbUH8seRiGQmlem1jf5aq1-7N1prTwAK_nGWOANTsHCCZQ4KPBmuroU7FJho7qkA7qaO-Lj7R4Ju_AEHDRxF3RCyb7T_sJTUat6CMba2xNPkhA2hmqusfSC5ra21_ttrNiYIENG3Fu4eu">
+</div>
+</div>
+</div>
+</section>
+<!-- Split-Screen Comparison (Bento style) -->
+<section class="py-xl px-gutter max-w-container-max mx-auto bg-surface-container-low rounded-3xl my-lg">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Dua Pengalaman, Satu Gunung</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Temukan suasana sempurna yang disesuaikan dengan suasana hati dan kebutuhan Anda.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Sky Altar -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-[0_10px_30px_-5px_rgba(45,71,57,0.05)] group">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An expansive outdoor cafe seating area overlooking a stunning mountain valley. The space is filled with comfortable, colorful bean bags and low wooden tables arranged asymmetrically. Young people are relaxing, taking photos, and enjoying the vibrant, youthful atmosphere. The scene is bright and breezy, set against a backdrop of rolling hills and clear skies. The visual style is modern, organic, and highly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ2DZmiu4gku2UA9-GItpCBEEszTsdYfZN0hZmiQKqSZ6rut5fCUMV69XzWjQ4bdPiKahtCTV27s90YR-g-3sdrmgu71_X7UotgWdd99mhfIvsrZ1DdsFEwhVJvRMHw0WU_5NxZzYMYyDbj2KVT7BlZdDVOoR13lOHw9KfvfA8XfNcOBmwG9vwnjl93JLdXacAt3-gSj5xuBELCX9w5iWfEWD54dxZOU1puWCQAlOEoeHI8MMb4wyz">
+</div>
+<div class="p-8 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="air">air</span>
+<h3 class="font-headline-md text-headline-md text-primary">Sky Altar Sindoro</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Dek terbuka luas kami yang dirancang untuk yang berjiwa muda dan bebas. Bersantailah di bean bag empuk, rasakan angin pegunungan, dan abadikan matahari terbenam yang sempurna. Tempat terbaik untuk nongkrong dan meresapi energi alam yang dinamis dengan kenyamanan bean bag yang santai.</p>
+</div>
+</div>
+<!-- Glass Sanctuary -->
+<div class="bg-surface rounded-xl overflow-hidden shadow-[0_10px_30px_-5px_rgba(45,71,57,0.05)] group">
+<div class="h-64 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cozy, elegantly designed indoor cafe interior featuring large floor-to-ceiling glass windows that frame a beautiful mountain landscape. The space is furnished with comfortable, supportive sofas and sturdy armchairs suitable for seniors. The lighting is soft and warm, highlighting the high-quality wood and warm sand textures. The atmosphere is calm, accessible, and premium, perfect for a relaxing family gathering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr47AE_ohJPGmGTTSSDhjeLTbLoVe44S3mDYni_IR_PQ1nTQoHK80uhgaLWqUSNGryo7nAoT-1mB-imT_1IadWiPrjl7GxsDHqagRU5rchIGsDcZ_T-2WfGbnAZEk0cHbiL31zEMES4YDVe2n0rG6r3ARH50UccYojAyy59bZgT5pDr9fLVtguOEf6ww5Rn4pFrSJ3TMrPLZa7D9dlH9s2lCw0HUv6FhpCopoDq6IfNRWvb4FCCSMW">
+</div>
+<div class="p-8 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="weekend">weekend</span>
+<h3 class="font-headline-md text-headline-md text-primary">Sanctuari Kaca</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Ruangan tertutup sepenuhnya dengan pengatur suhu yang menampilkan dinding kaca dari lantai hingga langit-langit. Dilengkapi dengan sofa ergonomis dan ruang yang luas, area ini sangat mudah diakses dan ramah lansia, memastikan pengalaman minum kopi yang nyaman dan tenang tanpa mengabaikan pemandangan.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-gutter flex flex-col md:flex-row justify-between items-start gap-md max-w-container-max mx-auto bg-surface-container-high">
+<div class="flex flex-col gap-4 max-w-sm">
+<span class="font-headline-md text-headline-md text-primary">Aro Cafe</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Permata tersembunyi di lereng Gunung Sindoro. Santai sejenak, bernapaslah, dan nikmati karya kami.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Hubungi Kami</h4>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-all flex items-center gap-2" href="#">Hubungi via WhatsApp</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-all flex items-center gap-2" href="#">Ikuti di Instagram</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-all flex items-center gap-2" href="#">Tonton di TikTok</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Legal</h4>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-all" href="#">Kebijakan Privasi</a>
+<p class="font-label-lg text-label-lg text-on-surface-variant mt-4 opacity-80">© 2024 Aro Cafe Mount Sindoro. Hak cipta dilindungi undang-undang.</p>
+</div>
+</footer>
+
+
+</body></html>

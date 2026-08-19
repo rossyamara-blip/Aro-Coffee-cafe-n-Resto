@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reservasi &amp; Lokasi - Aro Cafe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Noto+Serif:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#fbf9f4",
+                      "primary": "#173124",
+                      "surface-container": "#f0eee9",
+                      "primary-fixed": "#ccead6",
+                      "surface-dim": "#dbdad5",
+                      "inverse-on-surface": "#f2f1ec",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#eae8e3",
+                      "secondary": "#675d4d",
+                      "surface-container-low": "#f5f3ee",
+                      "on-background": "#1b1c19",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e4e2dd",
+                      "on-primary-container": "#98b5a3",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb598",
+                      "surface-tint": "#496455",
+                      "secondary-fixed": "#f0e0cc",
+                      "inverse-primary": "#b0cdbb",
+                      "on-tertiary-container": "#e99b7b",
+                      "primary-fixed-dim": "#b0cdbb",
+                      "surface-container-highest": "#e4e2dd",
+                      "secondary-fixed-dim": "#d3c4b1",
+                      "tertiary": "#4d1d06",
+                      "primary-container": "#2d4739",
+                      "on-secondary-fixed": "#221a0e",
+                      "on-surface": "#1b1c19",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#693219",
+                      "on-secondary-fixed-variant": "#4f4537",
+                      "on-error": "#ffffff",
+                      "outline": "#727973",
+                      "secondary-container": "#f0e0cc",
+                      "inverse-surface": "#30312e",
+                      "outline-variant": "#c2c8c2",
+                      "on-surface-variant": "#424844",
+                      "on-primary-fixed-variant": "#324c3e",
+                      "on-tertiary-fixed-variant": "#6f371e",
+                      "on-secondary-container": "#6e6353",
+                      "on-primary-fixed": "#062014",
+                      "tertiary-fixed": "#ffdbce",
+                      "on-tertiary-fixed": "#370e00",
+                      "surface": "#fbf9f4",
+                      "background": "#fbf9f4",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "80px",
+                      "container-max": "1200px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "lg": "40px",
+                      "md": "24px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Noto Serif", "serif"],
+                      "body-lg": ["Inter", "sans-serif"],
+                      "display-lg": ["Noto Serif", "serif"],
+                      "headline-sm": ["Noto Serif", "serif"],
+                      "headline-lg": ["Noto Serif", "serif"],
+                      "body-md": ["Inter", "sans-serif"],
+                      "headline-lg-mobile": ["Noto Serif", "serif"],
+                      "label-lg": ["Inter", "sans-serif"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(45, 71, 57, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-sm max-w-container-max mx-auto left-0 right-0 bg-surface/80 backdrop-blur-md dark:bg-inverse-surface/80 shadow-[0_10px_30px_-5px_rgba(45,71,57,0.08)]">
+<div class="font-headline-lg text-headline-lg text-primary dark:text-inverse-primary tracking-tight">
+            Aro Cafe
+        </div>
+<ul class="hidden md:flex gap-md items-center">
+<li>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container/20 px-sm py-xs rounded-lg transition-all scale-95 active:scale-100 duration-200" href="#">
+                    Menu
+                </a>
+</li>
+<li>
+<a class="font-label-lg text-label-lg text-primary dark:text-inverse-primary border-b-2 border-primary font-bold pb-1 hover:bg-surface-container-low dark:hover:bg-primary-container/20 px-sm py-xs rounded-lg transition-all scale-95 active:scale-100 duration-200" href="#">
+                    Reservasi
+                </a>
+</li>
+<li>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container/20 px-sm py-xs rounded-lg transition-all scale-95 active:scale-100 duration-200" href="#">
+                    Cerita Kami
+                </a>
+</li>
+<li>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container/20 px-sm py-xs rounded-lg transition-all scale-95 active:scale-100 duration-200" href="#">
+                    Lokasi
+                </a>
+</li>
+</ul>
+<div class="hidden md:block">
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-md py-sm rounded-full hover:opacity-90 transition-opacity scale-95 active:scale-100 duration-200 flex items-center gap-xs">
+                Pesan Meja
+            </button>
+</div>
+<button class="md:hidden text-primary p-xs">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</nav>
+<!-- Main Content -->
+<main class="pt-[120px] pb-xl max-w-container-max mx-auto px-gutter md:px-lg space-y-xl">
+<!-- Hero / Standard Reservation -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-lg items-center">
+<div class="md:col-span-5 space-y-md md:pr-lg">
+<h1 class="font-display-lg text-display-lg text-primary">Pesan Momen Ketenangan Anda</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Pesan meja dengan pemandangan lereng Gunung Sindoro yang tenang. Kami mengundang Anda untuk bersantai, menikmati kopi buatan kami, dan menghirup udara pegunungan.
+                </p>
+<div class="pt-base">
+<img alt="Aro Cafe View" class="w-full h-64 object-cover rounded-xl soft-shadow" data-alt="A serene, high-quality photograph of a rustic, elegantly set wooden cafe table looking out over a misty, green mountain landscape (Mount Sindoro). The lighting is soft morning sunlight, creating a calm, restorative atmosphere. The color palette emphasizes rich forest greens, warm woods, and soft off-whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9g37RFCE2uaI-9WNfCkA3RY4qqGGv_Isw0MUv_k9rPXJfIt1kpMxJzH1wrUVCQ1CXJ4KKSlPb_JUg8b3A5EbY3L2GLzn_fgGPewkME4vC5q-Y0UytYuPM7j7j59p2_dynNB--VN4361-QHaSrhLjsK0HJfxmAZN8Dwf4b2ta1pFpAQtCUmwInb0-CxJtB8oVt_buJO9kOCHZMzZG94VzI0a7ZF_Fs8P0W29J4Zn0KzooOomf6wxbG"/>
+</div>
+</div>
+<!-- Bento Card Form -->
+<div class="md:col-span-7 bg-surface-container-lowest p-lg rounded-xl soft-shadow border border-surface-container-high relative overflow-hidden">
+<!-- Botanical Accent Background -->
+<div class="absolute -top-10 -right-10 opacity-5 pointer-events-none text-primary">
+<svg fill="currentColor" height="200" viewbox="0 0 24 24" width="200" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 19 7 17 8Z"></path>
+</svg>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-md relative z-10">Reservasi Meja</h2>
+<form class="space-y-md relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Tanggal</label>
+<div class="relative">
+<input class="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface" type="date"/>
+</div>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Waktu</label>
+<div class="relative">
+<input class="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface" type="time"/>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Jumlah Tamu</label>
+<select class="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface appearance-none">
+<option>1-2 Tamu</option>
+<option>3-4 Tamu</option>
+<option>5-6 Tamu</option>
+<option>7+ Tamu (Silakan lihat acara)</option>
+</select>
+</div>
+<div class="pt-sm">
+<button class="w-full bg-primary text-on-primary font-label-lg text-label-lg py-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors soft-shadow" type="button">
+                            Konfirmasi Reservasi
+                        </button>
+</div>
+</form>
+</div>
+</section>
+<!-- The "Sindoro" Divider -->
+<div class="flex justify-center items-center py-lg opacity-20">
+<svg class="text-primary" fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 120 24" width="120">
+<path d="M0 20 L40 5 L60 15 L80 2 L120 20" stroke-linejoin="round"></path>
+</svg>
+</div>
+<!-- Private Events Section -->
+<section class="bg-surface-container-low rounded-[24px] p-lg md:p-xl soft-shadow border border-surface-variant">
+<div class="max-w-3xl mx-auto text-center mb-lg space-y-sm">
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-primary">Berkumpul di Kaki Gunung</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Adakan acara pribadi, ulang tahun, atau pertemuan komunitas di ruang yang dirancang untuk kebersamaan. Isi formulir di bawah ini untuk menanyakan tentang pemesanan eksklusif.
+                </p>
+</div>
+<form class="max-w-2xl mx-auto space-y-md bg-surface-container-lowest p-md md:p-lg rounded-xl border border-outline-variant/50">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Nama Lengkap</label>
+<input class="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Nama Anda" type="text"/>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Alamat Email</label>
+<input class="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="email@anda.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Jenis Acara</label>
+<input class="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="mis., Ulang Tahun, Lokakarya, Reuni" type="text"/>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-xs">Ceritakan tentang acara Anda</label>
+<textarea class="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors resize-none" placeholder="Perkiraan tanggal, jumlah tamu, dan permintaan khusus..." rows="4"></textarea>
+</div>
+<div class="text-right">
+<button class="bg-transparent border border-primary text-primary font-label-lg text-label-lg px-lg py-sm rounded-lg hover:bg-primary-container-low hover:bg-surface-tint/10 transition-colors" type="button">
+                        Kirim Pertanyaan
+                    </button>
+</div>
+</form>
+</section>
+<!-- Location & Directions (Asymmetrical Layout) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-xl items-start pt-lg">
+<!-- Left: Map & Practical Info -->
+<div class="md:col-span-7 space-y-md">
+<h3 class="font-headline-md text-headline-md text-primary">Temukan Jalan ke Sini</h3>
+<!-- Interactive Map Placeholder -->
+<div class="w-full h-[300px] bg-surface-container-high rounded-xl overflow-hidden soft-shadow relative" data-location="Mount Sindoro, Central Java" style="">
+<div class="bg-cover bg-center w-full h-full opacity-80 mix-blend-multiply" data-alt="A detailed overhead stylized map view illustrating a winding mountain road leading up to Mount Sindoro. The map is designed in a minimalist, elegant aesthetic using light creams, warm sands, and soft forest greens to indicate elevation and forests. A subtle, sophisticated pin marks the location of Aro Cafe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBVj6j6C0zqSwmDuOBvmofpQGDP1MuOK7ftrysRgGFYULF9qHDLRathxrvqrV2S3MZ7AJwmAGYsvrw8yHkt_FhHWyP0RT-zW28H7GGib4hu8iPFGZMtrKQN9bgALh1TrE40CW0GtdTeZYzy6W08Yllz6vkCPDvTJVkxRkBTopqbhmke4OTryc46DwlB9ENamgcC7luRqXzkoz9Ogjtmb8h3oFEXkhg0TJhPcxJNQaVjdkImF-EW5pm')"></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-surface-container-lowest/90 backdrop-blur px-md py-xs rounded-full font-label-lg text-label-lg text-primary shadow-sm border border-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">location_on</span> Lihat di Peta
+                         </div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl border border-surface-variant space-y-sm">
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-primary mt-xs">map</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Alamat</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">
+                                Jl. Raya Sindoro No. 88, Kledung Pass<br/>
+                                Jawa Tengah, Indonesia 56264
+                            </p>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<div class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-primary mt-xs">local_parking</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Parkir &amp; Patokan</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">
+                                Tersedia area parkir gratis yang luas untuk mobil dan sepeda motor. Kami berlokasi 500 meter setelah Rest Area Kledung di sebelah kiri saat menuju ke atas.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Hours & Contact -->
+<div class="md:col-span-5 bg-secondary-fixed/30 rounded-[24px] p-lg border border-secondary-fixed-dim space-y-lg">
+<div>
+<h3 class="font-headline-md text-headline-md text-tertiary-container mb-md">Jam Operasional</h3>
+<ul class="space-y-sm">
+<li class="flex justify-between items-baseline font-body-md text-body-md text-on-surface">
+<span class="font-headline-sm text-headline-sm">Sen - Kam</span>
+<div class="flex-grow border-b border-dotted border-outline-variant mx-xs opacity-50 relative top-[-6px]"></div>
+<span>08:00 - 20:00</span>
+</li>
+<li class="flex justify-between items-baseline font-body-md text-body-md text-on-surface">
+<span class="font-headline-sm text-headline-sm">Jum - Min</span>
+<div class="flex-grow border-b border-dotted border-outline-variant mx-xs opacity-50 relative top-[-6px]"></div>
+<span>07:00 - 22:00</span>
+</li>
+</ul>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-sm italic">
+                        *Jam operasional hari libur dapat bervariasi. Silakan periksa Instagram kami untuk pembaruan.
+                    </p>
+</div>
+<div class="space-y-sm pt-md border-t border-secondary-fixed-dim">
+<h3 class="font-headline-sm text-headline-sm text-tertiary-container">Tautan Cepat</h3>
+<button class="w-full bg-white border border-outline-variant text-on-surface font-label-lg text-label-lg py-sm rounded-lg hover:bg-surface-bright transition-colors flex items-center justify-center gap-sm soft-shadow">
+<span class="material-symbols-outlined">two_wheeler</span> Pesan Antar
+                    </button>
+<button class="w-full bg-[#25D366]/10 border border-[#25D366]/30 text-[#128C7E] font-label-lg text-label-lg py-sm rounded-lg hover:bg-[#25D366]/20 transition-colors flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined">forum</span> Hubungi via WhatsApp
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high dark:bg-inverse-surface w-full py-xl px-gutter flex flex-col md:flex-row justify-between items-start gap-md max-w-container-max mx-auto mt-xl">
+<div class="font-headline-md text-headline-md text-primary dark:text-inverse-primary">
+            Aro Cafe
+        </div>
+<div class="flex flex-col md:flex-row gap-lg md:gap-xl">
+<ul class="space-y-sm">
+<li>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary hover:underline transition-all opacity-80 hover:opacity-100" href="#">
+                        Hubungi kami via WhatsApp
+                    </a>
+</li>
+<li>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary hover:underline transition-all opacity-80 hover:opacity-100" href="#">
+                        Ikuti di Instagram
+                    </a>
+</li>
+<li>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary hover:underline transition-all opacity-80 hover:opacity-100" href="#">
+                        Tonton di TikTok
+                    </a>
+</li>
+</ul>
+<ul class="space-y-sm">
+<li>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary hover:underline transition-all opacity-80 hover:opacity-100" href="#">
+                        Kebijakan Privasi
+                    </a>
+</li>
+</ul>
+</div>
+<div class="w-full md:w-auto pt-md md:pt-0 mt-md md:mt-0 border-t md:border-t-0 border-surface-variant font-body-md text-body-md text-primary dark:text-primary-fixed-dim text-sm opacity-60">
+            © 2024 Aro Cafe Gunung Sindoro. Seluruh hak cipta dilindungi undang-undang.
+        </div>
+</footer>
+</body></html>
