@@ -1,4 +1,68 @@
+import { useState, useEffect } from 'react'
+import { supabase } from '../lib/supabaseClient.js'
+
 export default function ReservasiPage() {
+  const [form, setForm] = useState({
+    nama_lengkap: '',
+    nomor_meja: '',
+    tanggal: '',
+    waktu: '',
+    jumlah_tamu: '1-2 Tamu'
+  })
+  const [reservations, setReservations] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
+
+  useEffect(() => {
+    fetchReservations()
+  }, [])
+
+  const fetchReservations = async () => {
+    const { data, error } = await supabase
+      .from('reservasi')
+      .select('*')
+      .order('created_at', { ascending: false })
+
+    if (error) {
+      console.error('Error fetching reservations:', error)
+    } else {
+      setReservations(data || [])
+    }
+  }
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    setError('')
+    setSuccess('')
+
+    const { data, error } = await supabase
+      .from('reservasi')
+      .insert([{ ...form, jumlah_tamu: form.jumlah_tamu }])
+      .select()
+
+    setLoading(false)
+
+    if (error) {
+      setError('Gagal menyimpan reservasi: ' + error.message)
+    } else {
+      setSuccess('Reservasi berhasil disimpan!')
+      setForm({
+        nama_lengkap: '',
+        nomor_meja: '',
+        tanggal: '',
+        waktu: '',
+        jumlah_tamu: '1-2 Tamu'
+      })
+      fetchReservations()
+    }
+  }
+
   return (
     <div className="antialiased min-h-screen flex flex-col font-body-md text-body-md bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
       {/* TopNavBar */}
@@ -61,24 +125,40 @@ export default function ReservasiPage() {
               </svg>
             </div>
             <h2 className="font-headline-md text-headline-md text-primary mb-md relative z-10">Reservasi Meja</h2>
-            <form className="space-y-md relative z-10">
+            {error && <p className="text-error text-sm mb-md relative z-10">{error}</p>}
+            {success && <p className="text-primary text-sm mb-md relative z-10">{success}</p>}
+            <form className="space-y-md relative z-10" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
+                <div>
+                  <label className="block font-label-lg text-label-lg text-on-surface mb-xs">Nama Lengkap</label>
+                  <div className="relative">
+                    <input className="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface" name="nama_lengkap" value={form.nama_lengkap} onChange={handleChange} placeholder="Nama Anda" required type="text" />
+                  </div>
+                </div>
+                <div>
+                  <label className="block font-label-lg text-label-lg text-on-surface mb-xs">Nomor Meja</label>
+                  <div className="relative">
+                    <input className="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface" name="nomor_meja" value={form.nomor_meja} onChange={handleChange} placeholder="Nomor Meja" required type="text" />
+                  </div>
+                </div>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
                 <div>
                   <label className="block font-label-lg text-label-lg text-on-surface mb-xs">Tanggal</label>
                   <div className="relative">
-                    <input className="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface" type="date" />
+                    <input className="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface" name="tanggal" value={form.tanggal} onChange={handleChange} required type="date" />
                   </div>
                 </div>
                 <div>
                   <label className="block font-label-lg text-label-lg text-on-surface mb-xs">Waktu</label>
                   <div className="relative">
-                    <input className="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface" type="time" />
+                    <input className="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface" name="waktu" value={form.waktu} onChange={handleChange} required type="time" />
                   </div>
                 </div>
               </div>
               <div>
                 <label className="block font-label-lg text-label-lg text-on-surface mb-xs">Jumlah Tamu</label>
-                <select className="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface appearance-none">
+                <select className="w-full bg-surface-bright border-outline-variant rounded-lg p-sm font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-on-surface appearance-none" name="jumlah_tamu" value={form.jumlah_tamu} onChange={handleChange}>
                   <option>1-2 Tamu</option>
                   <option>3-4 Tamu</option>
                   <option>5-6 Tamu</option>
@@ -86,13 +166,44 @@ export default function ReservasiPage() {
                 </select>
               </div>
               <div className="pt-sm">
-                <button className="w-full bg-primary text-on-primary font-label-lg text-label-lg py-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-[0_10px_30px_-5px_rgba(45,71,57,0.08)]" type="button">
-                  Konfirmasi Reservasi
+                <button className="w-full bg-primary text-on-primary font-label-lg text-label-lg py-sm rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-[0_10px_30px_-5px_rgba(45,71,57,0.08)]" type="submit" disabled={loading}>
+                  {loading ? 'Menyimpan...' : 'Konfirmasi Reservasi'}
                 </button>
               </div>
             </form>
           </div>
         </section>
+
+        {/* Reservation List */}
+        {reservations.length > 0 && (
+          <section className="bg-surface-container-low rounded-[24px] p-lg md:p-xl shadow-[0_10px_30px_-5px_rgba(45,71,57,0.08)] border border-surface-variant">
+            <h2 className="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-primary mb-md">Daftar Reservasi</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-surface-variant">
+                    <th className="font-label-lg text-label-lg text-on-surface py-sm px-sm">Nama</th>
+                    <th className="font-label-lg text-label-lg text-on-surface py-sm px-sm">Meja</th>
+                    <th className="font-label-lg text-label-lg text-on-surface py-sm px-sm">Tanggal</th>
+                    <th className="font-label-lg text-label-lg text-on-surface py-sm px-sm">Waktu</th>
+                    <th className="font-label-lg text-label-lg text-on-surface py-sm px-sm">Tamu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {reservations.map((item) => (
+                    <tr key={item.id} className="border-b border-surface-variant/50 hover:bg-surface-container-lowest/50">
+                      <td className="font-body-md text-body-md text-on-surface py-sm px-sm">{item.nama_lengkap}</td>
+                      <td className="font-body-md text-body-md text-on-surface py-sm px-sm">{item.nomor_meja}</td>
+                      <td className="font-body-md text-body-md text-on-surface py-sm px-sm">{item.tanggal}</td>
+                      <td className="font-body-md text-body-md text-on-surface py-sm px-sm">{item.waktu}</td>
+                      <td className="font-body-md text-body-md text-on-surface py-sm px-sm">{item.jumlah_tamu}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
 
         {/* The "Sindoro" Divider */}
         <div className="flex justify-center items-center py-lg opacity-20">
