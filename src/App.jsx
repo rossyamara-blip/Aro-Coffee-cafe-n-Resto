@@ -1,15 +1,25 @@
-import TopNavBar from './components/TopNavBar.jsx'
-import MenuPage from './components/MenuPage.jsx'
-import Footer from './components/Footer.jsx'
+import { useState } from 'react';
+import TopNavBar from './components/TopNavBar';
+import BerandaPage from './components/BerandaPage';
+import ReservasiPage from './components/ReservasiPage';
+import Footer from './components/Footer';
 
 export default function App() {
+  const [halamanAktif, setHalamanAktif] = useState('beranda');
+
   return (
-    <div className="antialiased min-h-screen flex flex-col font-body-md text-body-md">
-      <TopNavBar />
-      <main className="flex-grow pt-32 pb-xl px-gutter max-w-container-max mx-auto w-full">
-        <MenuPage />
+    <div className="antialiased min-h-screen flex flex-col">
+      {/* Kirim fungsi pengubah halaman ke Navigasi */}
+      <TopNavBar setHalaman={setHalamanAktif} halamanAktif={halamanAktif} />
+      
+      {/* Isi Utama Halaman */}
+      <main className="flex-grow pt-22 pb-12 px-gutter mx-auto w-full max-w-7xl">
+        {halamanAktif === 'beranda' && <BerandaPage />}
+        {halamanAktif === 'reservasi' && <ReservasiPage />}
       </main>
+
+      {/* Footer Bawah */}
       <Footer />
     </div>
-  )
+  );
 }
